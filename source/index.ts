@@ -48,9 +48,8 @@ const config = {
     "prefer-alphabetical-peerDependencies": "error",
     "prefer-alphabetical-scripts": "error",
     "prefer-scripts": ["warning", [
-      "build",
-      "dev",
       "lint",
+      "release",
       "test"
     ]],
     "description-format": ["warning", {
