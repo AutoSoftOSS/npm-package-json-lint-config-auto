@@ -24,8 +24,7 @@
     "autorepo"
   ],
   "files": [
-    "./.build/**/*.js",
-    "./.build/**/*.d.ts"
+    ".auto/build/**/!(tsconfig.tsbuildinfo)"
   ],
   "scripts": {
     "build": "tsc --project ./tsconfig.json --incremental --module commonjs",
