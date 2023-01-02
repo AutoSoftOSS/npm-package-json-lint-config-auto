@@ -2,21 +2,41 @@
   "name": "npm-package-json-lint-config-auto",
   "version": "1.0.0",
   "description": "NPM Package.json Lint Config",
-  "main": "./.build/index.js",
+  "main": ".auto/build/index.js",
   "author": "Connor White",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autosoftoss/npm-package-json-lint-config-auto.git"
+  },
+  "keywords": [
+    "npm",
+    "package.json",
+    "pkg",
+    "json",
+    "package",
+    "lint",
+    "config",
+    "eslint",
+    "auto",
+    "autosoft",
+    "autorepo"
+  ],
   "files": [
     "./.build/**/*.js",
     "./.build/**/*.d.ts"
   ],
   "scripts": {
-    "build": "swc source -d .build && tsc --project ./tsconfig.json --incremental --emitDeclarationOnly"
-  },
-  "devDependencies": {
-    "@autosoft/tsconfig": "*"
+    "build": "tsc --project ./tsconfig.json --incremental --module commonjs",
+    "lint": "npmPkgJsonLint --configFile .auto/build/index.js .",
+    "prepack": "yarn build",
+    "release": "yarn version"
   },
   "dependencies": {
     "npm-package-json-lint": "^6.4.0"
+  },
+  "devDependencies": {
+    "@autosoft/tsconfig": "*"
   }
 }
