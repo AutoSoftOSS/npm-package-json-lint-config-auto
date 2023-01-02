@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@autosoft/tsconfig",
+  "compilerOptions": {
+    "outDir": ".build"
+  },
+  "files": [
+    "source/index.ts"
+  ]
+}
