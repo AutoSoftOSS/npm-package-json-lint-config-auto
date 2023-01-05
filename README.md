@@ -1,4 +1,5 @@
-<div align="center">
+<!--BEGIN HEADER-->
+<div id="top" align="center">
   <h1>npm-package-json-lint-config-auto</h1>
   <a href="https://npmjs.com/package/npm-package-json-lint-config-auto">
     <img alt="npm" src="https://img.shields.io/npm/v/npm-package-json-lint-config-auto.svg">
@@ -12,6 +13,8 @@
 
 <blockquote align="center">NPM Package.json Lint Config</blockquote>
 
+<br />
+
 _If I should maintain this repo, please ⭐️_
 <a href="https://github.com/autosoftoss/npm-package-json-lint-config-auto">
   <img align="right" alt="GitHub stars" src="https://img.shields.io/github/stars/autosoftoss/npm-package-json-lint-config-auto?label=%E2%AD%90%EF%B8%8F&style=social">
@@ -23,7 +26,7 @@ _DM me on [Twitter](https://twitter.com/bconnorwhite) if you have questions or s
 </a>
 
 ---
-
+<!--END HEADER-->
 This package provides a base config for [npm-package-json-lint](https://www.npmjs.com/package/npm-package-json-lint).
 
 ## Installation
@@ -56,19 +59,25 @@ In your `package.json` file:
 
 Now to run `npm-package-json-lint`, run `yarn npmPkgJsonLint .` or `npm run npmPkgJsonLint .`.
 
+<!--BEGIN FOOTER-->
+
 <br />
 
 <h2 id="dependencies">Dependencies<a href="https://www.npmjs.com/package/npm-package-json-lint-config-auto?activeTab=dependencies"><img align="right" alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-package-json-lint-config-auto.svg"></a></h2>
 
 - [npm-package-json-lint](https://www.npmjs.com/package/npm-package-json-lint): Configurable linter for package.json files.
 
-<h3 id="dev-dependencies">Dev Dependencies</h3>
-
-- [@autosoft/tsconfig](https://www.npmjs.com/package/@autosoft/tsconfig): A base for TypeScript projects.
 
 <br />
 
+<h3>Dev Dependencies</h3>
+
+- [@autosoft/tsconfig](https://www.npmjs.com/package/@autosoft/tsconfig): A base for TypeScript projects.
+
+
+<br />
 
 <h2 id="license">License <a href="https://opensource.org/licenses/MIT"><img align="right" alt="license" src="https://img.shields.io/npm/l/npm-package-json-lint-config-auto.svg"></a></h2>
 
 [MIT](https://opensource.org/licenses/MIT)
+<!--END FOOTER-->
