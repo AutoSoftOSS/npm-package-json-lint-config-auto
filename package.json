@@ -1,6 +1,6 @@
 {
   "name": "npm-package-json-lint-config-auto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NPM Package.json Lint Config",
   "main": ".auto/build/index.js",
   "author": "Connor White",
