@@ -76,6 +76,8 @@ const config = {
       "files",
       "engines",
       "scripts",
+      "bundleDependencies",
+      "bundledDependencies",
       "dependencies",
       "peerDependencies",
       "devDependencies",
