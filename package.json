@@ -36,6 +36,6 @@
     "npm-package-json-lint": "^6.4.0"
   },
   "devDependencies": {
-    "@autosoft/tsconfig": "*"
+    "@autosoft/tsconfig": "^1.0.1"
   }
 }
