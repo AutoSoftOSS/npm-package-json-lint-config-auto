@@ -67,13 +67,11 @@ Now to run `npm-package-json-lint`, run `yarn npmPkgJsonLint .` or `npm run npmP
 
 - [npm-package-json-lint](https://www.npmjs.com/package/npm-package-json-lint): Configurable linter for package.json files.
 
-
 <br />
 
 <h3>Dev Dependencies</h3>
 
 - [@autosoft/tsconfig](https://www.npmjs.com/package/@autosoft/tsconfig): A base for TypeScript projects.
-
 
 <br />
 
