@@ -1,97 +1,50 @@
+import { requireRules } from "./require.js";
+import { typeRules } from "./type.js";
+import { validValueRules } from "./valid-value.js";
+import { dependencyRules } from "./dependency.js";
+import { scriptsRules } from "./scripts.js";
+import { formatRules } from "./format.js";
+import { propertyRules } from "./property.js";
 
-const config = {
-  rules: {
-    "require-name": "error",
-    "require-version": "error",
-    "require-description": "error",
-    "require-main": "error",
-    "require-author": "error",
-    "require-license": "error",
-    "require-repository": "error",
-    "require-keywords": "warning",
-    "require-files": "error",
-    "require-scripts": "warning",
-    "bin-type": "warning",
-    "bundledDependencies-type": "warning",
-    "config-type": "warning",
-    "cpu-type": "warning",
-    "dependencies-type": "warning",
-    "description-type": "warning",
-    "devDependencies-type": "warning",
-    "directories-type": "warning",
-    "engines-type": "warning",
-    "files-type": "warning",
-    "homepage-type": "warning",
-    "keywords-type": "warning",
-    "license-type": "warning",
-    "main-type": "warning",
-    "man-type": "warning",
-    "name-type": "warning",
-    "optionalDependencies-type": "warning",
-    "os-type": "warning",
-    "peerDependencies-type": "warning",
-    "preferGlobal-type": "warning",
-    "private-type": "warning",
-    "repository-type": "warning",
-    "scripts-type": "warning",
-    "version-type": "warning",
-    "no-archive-dependencies": "warning",
-    "no-file-dependencies": "warning",
-    "no-git-dependencies": "warning",
-    "prefer-alphabetical-dependencies": "error",
-    "no-archive-devDependencies": "warning",
-    "no-file-devDependencies": "warning",
-    "no-git-devDependencies": "warning",
-    "prefer-alphabetical-devDependencies": "error",
-    "prefer-alphabetical-bundledDependencies": "error",
-    "prefer-alphabetical-optionalDependencies": "error",
-    "prefer-alphabetical-peerDependencies": "error",
-    "prefer-alphabetical-scripts": "error",
-    "prefer-scripts": ["warning", [
-      "lint",
-      "release",
-      "test"
-    ]],
-    "description-format": ["warning", {
-      requireCapitalFirstLetter: true
-    }],
-    "name-format": "error",
-    "version-format": "error",
-    "prefer-property-order": ["error", [
-      "name",
-      "version",
-      "description",
-      "main",
-      "author",
-      "license",
-      "private",
-      "type",
-      "homepage",
-      "repository",
-      "contributors",
-      "keywords",
-      "exports",
-      "types",
-      "bin",
-      "files",
-      "engines",
-      "scripts",
-      "bundleDependencies",
-      "bundledDependencies",
-      "dependencies",
-      "peerDependencies",
-      "devDependencies",
-      "eslintConfig",
-      "husky",
-      "jest",
-      "npmpackagejsonlint",
-      "workspaces",
-      "publishConfig"
-    ]],
-    "no-duplicate-properties": "error",
-    "prefer-no-optionalDependencies": "error"
-  }
+export type ProjectType = {
+  /**
+   * If the project will be published to NPM.
+   */
+  publish: boolean;
+  /**
+   * If the project includes a binary.
+   */
+  bin: boolean;
+  /**
+   * If the project needs to be built.
+   */
+  build: boolean;
+  /**
+   * If the project is the root of a workspace.
+   */
+  workspace: boolean;
 };
+
+export function getConfig(projectType: ProjectType) {
+  return {
+    rules: {
+      ...requireRules(projectType),
+      ...typeRules(),
+      ...validValueRules(projectType),
+      ...dependencyRules(),
+      ...scriptsRules(projectType),
+      ...formatRules(),
+      ...propertyRules()
+    }
+  };
+}
+
+const config = getConfig({
+  publish: true,
+  bin: false,
+  build: true,
+  workspace: false
+});
 
 module.exports = config;
 
