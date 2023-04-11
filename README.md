@@ -11,7 +11,7 @@
 
 <br />
 
-<blockquote align="center">NPM Package.json Lint Config</blockquote>
+<blockquote align="center">Nice defaults for NPM Package.json Lint</blockquote>
 
 <br />
 
